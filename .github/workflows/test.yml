@@ -8,7 +8,7 @@ on:
         branches:
             - 'dev-**'
         paths-ignore:
-            - '.github/workflows/*/'
+            - '.github/workflows/**/' 
 
 jobs:
     test:
