@@ -5,6 +5,9 @@ on:
             - opened
         paths-ignore:
             - '.github/workflows/**/'
+    push:
+        branches:
+            - main
 jobs:
     test:
         runs-on: ubuntu-latest
