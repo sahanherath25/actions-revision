@@ -4,6 +4,12 @@
 /node_modules
 /.pnp
 .pnp.js
+.idea
+
+#do not need to track
+*.zip
+*.rar
+*.txt
 
 # testing
 /coverage
