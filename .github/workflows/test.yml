@@ -3,7 +3,7 @@ on:
     pull_request:
         types:
             - opened
-        paths-ignore:
+        paths:
             - '.github/workflows/**/'
 jobs:
     test:
