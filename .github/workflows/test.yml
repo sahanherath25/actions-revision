@@ -8,7 +8,7 @@ on:
     push:
         branches:
             - dev-sahan
-        paths-ignore:
+        paths:
             - '.github/workflows/**'
 
 jobs:
