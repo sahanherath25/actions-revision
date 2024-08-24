@@ -2,7 +2,7 @@ name: default_workflow
 on:
     push:
         branches-ignore:
-            - dev-sahan
+            - 'dev-*'
 
 jobs:
     deployment:
