@@ -1,0 +1,40 @@
+name: default_workflow
+on:
+    pull_request:
+        types:
+            - opened
+        paths-ignore:
+            - '.github/workflows/**/'
+            
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get the code
+              uses: actions/checkout@v4
+            - name: Install Node Js
+              uses: actions/setup-node@v4
+              with:
+                node-version: 20
+            - name: Install Dependencies
+              run: npm ci
+            - name: Testing Project
+              run: echo "Testing Completed"
+            - name: Deploy
+              run: echo " ${{toJSON(github.event)}}"
+    deploy:
+        needs: test
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get the code
+              uses: actions/checkout@v4
+            - name: Install Node Js
+              uses: actions/setup-node@v4
+              with:
+                node-version: 20
+            - name: Install Dependencies
+              run: npm ci
+            - name: Testing Project
+              run: echo "Deploying to Server..."
+            - name: Event Details
+              run: echo " ${{toJSON(github.event)}}"
