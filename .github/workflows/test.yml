@@ -7,7 +7,7 @@ on:
             - '.github/workflows/**/'
     push:
         branches:
-            - main
+            - dev-sahan
 jobs:
     test:
         runs-on: ubuntu-latest
