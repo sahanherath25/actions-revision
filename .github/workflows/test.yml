@@ -19,7 +19,7 @@ jobs:
             - name: Testing Project
               run: echo "Testing Completed"
             - name: Deploy
-              run: echo " toJSON{{toJSON(github.event)}}"
+              run: echo " ${{toJSON(github.event)}}"
     deploy:
         needs: test
         runs-on: ubuntu-latest
@@ -35,4 +35,4 @@ jobs:
             - name: Testing Project
               run: echo "Deploying to Server..."
             - name: Event Details
-              run: echo " {{toJSON(github.event)}}"
+              run: echo " ${{toJSON(github.event)}}"
