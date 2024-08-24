@@ -19,7 +19,7 @@ jobs:
             - name: Testing Project
               run: echo "Testing Completed"
             - name: Deploy
-              run: echo " ${{toJSON(github.event)}}"
+              run: echo " ${{toJSON(github.event.committer.email)}}"
     deploy:
         needs: test
         runs-on: ubuntu-latest
