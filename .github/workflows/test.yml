@@ -1,8 +1,16 @@
 name: default_workflow
 on:
+    pull_request:
+        types:
+            - opened
+            - edited
     push:
         branches:
-            - 'dev-*'
+            - 'dev-**'
+        paths-ignore:
+            - '.github/workflows/*/'
+
+
 
 jobs:
     test:
@@ -19,7 +27,7 @@ jobs:
             - name: Testing Project
               run: echo "Testing Completed"
             - name: Deploy
-              run: echo " ${{toJSON(github.event.committer.email)}}"
+              run: echo " ${{toJSON(github.event)}}"
     deploy:
         needs: test
         runs-on: ubuntu-latest
