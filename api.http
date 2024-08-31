@@ -1,0 +1,23 @@
+GET http://localhost:3001/books HTTP/1.1
+Content-Type: application/json
+
+###
+POST http://localhost:3001/books HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Dear John"
+}
+
+###
+PUT http://localhost:3001/books/a3ed HTTP/1.1
+Content-Type: application/json
+
+
+{
+  "title": "Dear John Nicholas Sparks"
+}
+
+###
+DELETE http://localhost:3001/books/a3ed HTTP/1.1
+Content-Type: application/json

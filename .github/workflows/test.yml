@@ -10,7 +10,6 @@ on:
             - dev-sahan
         paths:
             - '.github/workflows/**'
-
 jobs:
     test:
         runs-on: ubuntu-latest
