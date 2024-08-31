@@ -1,9 +1,17 @@
 name: Books App Workflow
 on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - main
+      - 'dev-test'
+      - 'devs-**'
   push:
-    - main
-    - 'dev-**'
-    - 'dev/**/'
+    branches:
+      - main
+      - 'dev-**'
+      - 'dev/**/'
 jobs:
   start:
     runs-on: ubuntu-latest
