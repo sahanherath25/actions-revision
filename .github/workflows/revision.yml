@@ -1,13 +1,5 @@
 name: Books App Workflow
 on:
-  pull_request:
-    types:
-      - opened
-      - closed
-    branches:
-      - main
-      - 'dev-test'
-      - 'devs-**'
   push:
     - main
     - 'dev-**'
