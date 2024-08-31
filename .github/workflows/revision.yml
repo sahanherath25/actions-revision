@@ -10,7 +10,7 @@ on:
       - 'devs-**'
   push:
     - main
-    - 'devs-**'
+    - 'dev-**'
     - 'dev/**/'
 jobs:
   start:
