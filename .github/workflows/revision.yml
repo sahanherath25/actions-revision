@@ -23,9 +23,9 @@ jobs:
         with:
           node-version: 20
       - name: Install Dependencies
-         run: npm ci
+        run: npm ci
       - name: Start App
-         run: echo "App Starting ....."
+        run: echo "App Starting ....."
   test:
      needs: start
      runs-on: ubuntu-latest
