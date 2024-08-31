@@ -23,38 +23,8 @@ jobs:
         with:
           node-version: 20
       - name: Install Dependencies
-         run: npm ci
+          run: npm ci
       - name: Start App
-         run: echo "App Starting ....."
-
-  test:
-     needs: start
-     runs-on: ubuntu-latest
-     steps:
-       - name: get the code
-         uses: actions/checkout@v4
-       - name: Install Node JS
-         uses: actions/node-setup@v4
-         with:
-           node-version: 20
-       - name: Install Dependencies
-          run: npm ci
-       - name: Deploying
-          run: echo "Deploying to server...."
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-       - name: get code
-         uses: actions/checkout@v4
-       - name: Install Node
-         with: actions/node-setup@v4
-         node-version:
-           version: 20
-       - name: Install Dependencies
-          run: npm ci
-       - name: Deploy App
-          run: echo "Deploying to the server ....."
-
+          run: echo "App Starting ....."
 
 
